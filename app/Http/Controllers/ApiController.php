@@ -8,8 +8,8 @@ use GuzzleHttp\Client;
 
 use App\Demand_setting;
 use App\Location;
-
-
+use App\Setting;
+use Auth;
 class ApiController extends Controller
 {
     public function demand()
@@ -54,5 +54,13 @@ class ApiController extends Controller
         $sunset = date_sunset(time(), SUNFUNCS_RET_STRING, $location->lat, $location->lng, 90, $rawOffset);//日出時間
         $sunrise = date_sunrise(time(), SUNFUNCS_RET_STRING, $location->lat, $location->lng, 90, $rawOffset);//日落時間
         return ['lat'=>$lat,'lng'=>$lng,'timeZoneId'=> $timeZoneId,'rawOffset'=> $rawOffset, 'sunset' => $sunset,'sunrise'=>$sunrise];
+    }
+
+    public function boot()
+    {
+        $settings=Setting::all();
+        $all['id'] = "test";
+        $all['boot'] = $settings->toJson();
+        return response()->json($all);
     }
 }

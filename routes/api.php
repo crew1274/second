@@ -37,3 +37,5 @@ Route::get('geocoding', 'ApiController@geocoding')->name('geocoding');
 
 /*取得日出落時間*/
 Route::get('suntime', 'ApiController@suntime')->name('suntime');
+/*開機設定*/
+Route::get('boot', 'ApiController@boot')->name('boot');

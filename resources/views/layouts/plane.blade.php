@@ -13,12 +13,14 @@
 	<meta content="" name="description"/>
 	<meta content="" name="author"/>
 	<link rel="icon" href="{{ asset("favicon.ico") }}" type="image/x-icon" />
+	<!-- Stylesheet -->
 	<link rel="stylesheet" href="{{ asset("assets/stylesheets/styles.css") }}"/>
 	@stack('css')
 </head>
 <body>
 	@yield('body')
+	<!-- Scripts -->
 	<script src="{{ asset("assets/scripts/frontend.js") }}" type="text/javascript"></script>
-@stack('javascript')
+	@stack('javascript')
 </body>
 </html>

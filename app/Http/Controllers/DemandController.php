@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Demand_setting;
 
+use GuzzleHttp\Client;
+
 class DemandController extends Controller
 {
     public function __construct()
@@ -54,6 +56,7 @@ class DemandController extends Controller
             'group' => 'required',
             'cycle' => 'required',
         ]);
+        
         $input = $request->all();
         $input['value_max'] = $input['value']/100*$input['value_max'];
         $input['value_min'] = $input['value']/100*$input['value_min'];
