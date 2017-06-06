@@ -9,6 +9,7 @@
 <code>$ composer install</code>     
 <code>$ cp .env.example .env</code>     
 > **Note:** 檢查 .env的設定      
+
 <code>$ php artisan key:generate</code>     
 <code>$ php artisan migrate --seed</code>      
 <code>$ cp storage/app/control_backup.json storage/app/control.json</code>      
