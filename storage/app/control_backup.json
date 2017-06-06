@@ -1,0 +1,14 @@
+{"control":[
+  {"group":1,"available":true,"boolean":false},
+  {"group":2,"available":true,"boolean":false},
+  {"group":3,"available":true,"boolean":false},
+  {"group":4,"available":true,"boolean":false},
+  {"group":5,"available":false,"boolean":false},
+  {"group":6,"available":false,"boolean":false},
+  {"group":7,"available":false,"boolean":false},
+  {"group":8,"available":false,"boolean":false},
+  {"group":9,"available":false,"boolean":false},
+  {"group":10,"available":false,"boolean":false},
+  {"group":11,"available":false,"boolean":false},
+  {"group":12,"available":false,"boolean":false}
+  ]}
