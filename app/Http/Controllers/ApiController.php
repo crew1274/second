@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 
 use App\Demand_setting;
+use App\Demand_record;
 use App\Location;
 use App\Setting;
 use Auth;
@@ -59,8 +60,16 @@ class ApiController extends Controller
     public function boot()
     {
         $settings=Setting::all();
-        $all['id'] = "test";
+        $all['id'] = 15;
         $all['boot'] = $settings->toJson();
+        return response()->json($all);
+    }
+
+    public function real()
+    {
+        $demand = Demand_record::orderBy('created_at', 'desc')->first();
+        $value = $demand -> value;
+        $all['value'] = $value;
         return response()->json($all);
     }
 }
