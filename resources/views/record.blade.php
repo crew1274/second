@@ -1,39 +1,19 @@
 @extends ('layouts.dashboard')
+@push('css')
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.css">@endpush
 @section('title','Record')
 @section('page_heading','Record')
 
 @section('section')
 <div class="col-sm-12">
-	<div class="row">
-		<div class="col-sm-6">
-			@section ('cchart1_panel_title','Record')
-			@section ('cchart1_panel_body')
-			@include('widgets.charts.clinechart')
-			@endsection
-			@include('widgets.panel', array('header'=>true, 'as'=>'cchart1'))
-
-			@section ('cchart3_panel_title','Donut Chart')
-			@section ('cchart3_panel_body')
-				<div style="max-width:400px; margin:0 auto;">@include('widgets.charts.cdonutchart')</div>
-			@endsection
-			@include('widgets.panel', array('header'=>true, 'as'=>'cchart3'))
-		</div>
-		<div class="col-sm-6">
-
-			@section ('cchart2_panel_title','Pie Chart')
-			@section ('cchart2_panel_body')
-				<div style="max-width:400px; margin:0 auto;">@include('widgets.charts.cpiechart')</div>
-			@endsection
-			@include('widgets.panel', array('header'=>true, 'as'=>'cchart2'))
-
-			@section ('cchart4_panel_title','Bar Chart')
-			@section ('cchart4_panel_body')
-			@include('widgets.charts.cbarchart')
-			@endsection
-			@include('widgets.panel', array('header'=>true, 'as'=>'cchart4'))
-		</div>
-	</div>
-
-
+{!! $dataTable->table() !!}
 </div>
+
 @stop
+@push('javascript')
+<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
+<script src="/vendor/datatables/buttons.server-side.js"></script>
+{!! $dataTable->scripts() !!}
+@endpush

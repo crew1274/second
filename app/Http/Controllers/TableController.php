@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\DataTables\RecordsDataTable;
 class TableController extends Controller
 {
     /**
@@ -11,9 +12,9 @@ class TableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(RecordsDataTable $dataTable)
     {
-        //
+        return $dataTable->render('record');
     }
 
     /**

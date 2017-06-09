@@ -169,6 +169,7 @@ return [
          * Package Service Providers...
          */
          ConsoleTVs\Charts\ChartsServiceProvider::class,
+         Yajra\Datatables\DatatablesServiceProvider::class,
         //
 
         /*

@@ -51,7 +51,7 @@ Route::get('offload/off/{id}', 'OffloadController@off');
 /*即時控制*/
 Route::get('control', 'ControlController@index');
 Route::post('control/switch', 'ControlController@switch');
-
+Route::get('record', 'TableController@index');
 Route::get('documentation', 'DashboardController@documentation');
 
 /*更換語系*/
