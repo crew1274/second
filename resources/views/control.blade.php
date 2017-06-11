@@ -3,12 +3,12 @@
 <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.4.2/sweetalert2.css">
 @endpush
-@section('title','即時控制')
-@section('page_heading','即時控制')
+@section('title',trans('dashboard.control'))
+@section('page_heading',trans('dashboard.control'))
 @section('section')
 
 <div class="col-sm-6">
-		@section ('5button_panel_title','簡易控制')
+		@section ('5button_panel_title',trans('dashboard.control'))
 		@section ('5button_panel_body')
 
 		@foreach($json['control'] as $json)

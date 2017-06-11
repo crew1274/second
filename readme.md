@@ -8,10 +8,11 @@
 <br>
 <code>$ composer install</code>     
 <code>$ cp .env.example .env</code>     
-> **Note:** 檢查 .env的設定      
+> **Note:** 檢查 .env的資料庫環境變數      
 
 <code>$ php artisan key:generate</code>     
 <code>$ php artisan migrate --seed</code>      
+<code>$ php artisan vendor:publish</code>      
 <code>$ cp storage/app/control_backup.json storage/app/control.json</code>      
 <code>$ sudo chmod 755 -R ../second/</code>      
 <code>$ sudo chmod o+w -R storage/</code>       

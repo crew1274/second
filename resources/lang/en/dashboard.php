@@ -14,5 +14,10 @@ return [
     'demand_respond_time' => ' Time Gap',
     'demand_respond_mode' => ' Off-load mode',
     'location'=> ' Location',
-
+    'control' => 'Control',
+    'documentation' => 'Documentation',
+    'sunrise' => 'Sunrise',
+    'sunset' => 'Sunset',
+    'null' => 'Null',
+    'realtime' => 'Demand Value Real Time Monitor',
 ];

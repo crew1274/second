@@ -22,15 +22,15 @@ class DashboardController extends Controller
             ->height(300)
             ->width(0)
             ->colors(['#2196F3'])
-            ->title("需量即時監控")
+            ->title(trans('dashboard.realtime'))
             ->valueName('value');
         
         $location = Location::all() -> last();
         if($location==null)
-        {$sunset = '尚未設定';
-         $sunrise = '尚未設定';
-         $rawOffset = '尚未設定';
-         $timeZoneId= '尚未設定';
+        {$sunset = trans('dashboard.null');
+         $sunrise = trans('dashboard.null');
+         $rawOffset = trans('dashboard.null');
+         $timeZoneId= trans('dashboard.null');
         }
         else{
         $timeZoneId=$location->timeZoneId;

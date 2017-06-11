@@ -15,5 +15,8 @@ return [
     'demand_respond_time' => ' 時間間格設定',
     'demand_respond_mode' => ' 卸載模式設定',
     'location'=> ' 地址設定',
-
+    'sunrise' => '日出',
+    'sunset' => '日落',
+    'null' => '尚未設定',
+    'realtime' => '需量即時監控',
 ];

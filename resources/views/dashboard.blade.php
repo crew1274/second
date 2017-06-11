@@ -121,7 +121,7 @@
                                     <i class="fa fa-sun-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                <div class='huge'>日出-日落
+                                <div class='huge'>{{trans('dashboard.sunrise')}}-{{trans('dashboard.sunset')}}
                                    <h3>{{ $sunrise }} - {{ $sunset }}</h4></div></h3>
                                 </div>
                             </div>
