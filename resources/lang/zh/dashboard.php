@@ -19,4 +19,5 @@ return [
     'sunset' => '日落',
     'null' => '尚未設定',
     'realtime' => '需量即時監控',
+    'value' => '需量',
 ];

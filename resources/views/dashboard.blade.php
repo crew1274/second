@@ -1,5 +1,5 @@
 @extends('layouts.dashboard')
-@section('title',trans('home.home'))
+@section('title',trans('home.dashboard'))
 @section('page_heading',trans('home.dashboard'))
 @section('section')
           <!-- /.row -->

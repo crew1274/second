@@ -18,7 +18,7 @@ class DashboardController extends Controller
     {
         $chart= Charts::realtime(route('real_data'), 3000, 'line', 'highcharts')
             ->responsive(true)
-            ->elementLabel("需量")
+            ->elementLabel(trans('dashboard.value'))
             ->height(300)
             ->width(0)
             ->colors(['#2196F3'])

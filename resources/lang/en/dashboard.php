@@ -20,4 +20,5 @@ return [
     'sunset' => 'Sunset',
     'null' => 'Null',
     'realtime' => 'Demand Value Real Time Monitor',
+    'value' => 'Value',
 ];
