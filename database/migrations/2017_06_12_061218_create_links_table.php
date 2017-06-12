@@ -19,6 +19,7 @@ class CreateLinksTable extends Migration
             $table->string('ip')->nullable();
             $table->string('path')->nullable();
             $table->string('port')->nullable();
+            $table->string('key')->nullable();
             $table->timestamps();
         });
     }

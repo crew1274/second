@@ -21,4 +21,5 @@ return [
     'null' => 'Null',
     'realtime' => 'Demand Value Real Time Monitor',
     'value' => 'Value',
+    'link' => 'Server Link',
 ];

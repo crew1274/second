@@ -39,9 +39,9 @@ Route::post('profile/update', 'ProfileController@update');
 /*所在地更新*/
 Route::get('location', 'LocationController@index');
 Route::post('location', 'LocationController@store');
-/*api位址更新*/
+/*server位址更新*/
 Route::get('link', 'LinkController@index');
-Route::post('link', 'LinkController@store');
+Route::post('link', ['as' => 'link', 'uses' => 'LinkController@store']);
 /*需量設定*/
 Route::get('demand', 'DemandController@index');
 Route::post('demand', 'DemandController@store');

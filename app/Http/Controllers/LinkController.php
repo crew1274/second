@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Link;
+
 class LinkController extends Controller
 {
     public function __construct()
@@ -17,7 +19,8 @@ class LinkController extends Controller
      */
     public function index()
     {
-        //
+        $link = Link::all() -> last();
+        return view('link',compact('link'));
     }
 
     /**
@@ -38,7 +41,15 @@ class LinkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'domain' => 'url',
+            'ip' => 'ip',
+            'port' => 'integer',
+            'path' => 'string',
+            'key' => 'string',
+        ]);
+        Link::create($request->all());
+        return redirect()->action('DashboardController@index');
     }
 
     /**
