@@ -9,6 +9,8 @@
 <code>$ composer install</code>     
 <code>$ cp .env.example .env</code>     
 > **Note:** 檢查 .env的資料庫環境變數      
+cat /proc/sys/kernel/random/uuid
+
 
 <code>$ php artisan key:generate</code>     
 <code>$ php artisan migrate --seed</code>      
