@@ -13,10 +13,10 @@ use App\Setting;
 use Auth;
 class ApiController extends Controller
 {
-    public function demand()
+    public function demand_setting()
     {
-        $last=Demand_setting::all() ->last();
-        return response()->json($last->toJson());
+        $last=Demand_setting::all()->last();
+        return response()->json($last);
     }
 
     public function geocoding()
@@ -60,9 +60,7 @@ class ApiController extends Controller
     public function boot()
     {
         $settings=Setting::all();
-        $all['id'] = 15;
-        $all['boot'] = $settings->toJson();
-        return response()->json($all);
+        return response()->json($settings);
     }
 
     public function real()
@@ -70,6 +68,6 @@ class ApiController extends Controller
         $demand = Demand_record::orderBy('created_at', 'desc')->first();
         $value = $demand -> value;
         $all['value'] = $value;
-        return response()->json($all);
+        return response()->json($demand );
     }
 }

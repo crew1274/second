@@ -30,7 +30,7 @@ return ['value' => rand(1,50)];
 })->name('random_data');
 
 /*需量設定api*/
-Route::get('demand', 'ApiController@demand')->name('demand');
+Route::get('demand_setting', 'ApiController@demand_setting')->name('demand_setting');
 
 /*取得經緯度*/
 Route::get('geocoding', 'ApiController@geocoding')->name('geocoding');
