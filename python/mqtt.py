@@ -46,14 +46,14 @@ def command( topic, recv ):
             connection.commit()
         finally:
             connection.close()
-    
+    '''
     if action == 'query' and table=='demand_settings':
         try:            
             with connection.cursor() as cursor:
                 sql = "SELECT * FROM `"+table+"` ORDER BY ID DESC LIMIT 1"
                 cursor.execute(sql)
                 result = cursor.fetchone()
-                print(result)
+                #print(result)
             #connection.commit()
         finally:
             connection.close()
@@ -69,7 +69,8 @@ def command( topic, recv ):
         finally:
             connection.close()
 
-
+    '''
+    
     '''
     if(recv == bytearray(b'down')):
         os.system('php %s/artisan down'%(dist))
