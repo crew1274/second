@@ -79,6 +79,23 @@ def command( topic, recv ):
             connection.close()
 
     '''
+    if action == 'update' and table=='settings':
+        try:            
+            with connection.cursor() as cursor:
+                sql = "UPDATE `"+db+"`.`"+table+"` SET `model` = %s, `address`= %s, `ch`= %s, `speed`= %s, `circuit`= %s, `updated_at`= %s WHERE `"+table+"`.`id` = %s"
+                cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['updated_at'],json.loads(payload)['id']))
+            connection.commit()
+        finally:
+            connection.close()
+    
+    if action == 'delete' and table=='settings':
+        try:            
+            with connection.cursor() as cursor:
+                sql = "DELETE FROM `"+db+"`.`"+table+"` WHERE `"+table+"`.`id` = %s"
+                cursor.execute(sql,(json.loads(payload)['id']))
+            connection.commit()
+        finally:
+            connection.close()
     
     '''
     if(recv == bytearray(b'down')):

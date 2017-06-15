@@ -16,6 +16,7 @@ class ApiController extends Controller
     public function demand_setting()
     {
         $last=Demand_setting::all()->last();
+        $last->uuid = env('UUID');
         return response()->json($last);
     }
 
@@ -60,6 +61,9 @@ class ApiController extends Controller
     public function boot()
     {
         $settings=Setting::all();
+        $count=Setting::all()->count();
+        $array = array('uid' => env('UUID'));
+        $settings[$count] = $array;
         return response()->json($settings);
     }
 
