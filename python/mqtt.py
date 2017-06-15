@@ -46,6 +46,15 @@ def command( topic, recv ):
             connection.commit()
         finally:
             connection.close()
+
+    if action == 'insert' and table=='settings':
+        try:            
+            with connection.cursor() as cursor:
+                sql = "INSERT INTO `"+db+"`.`"+table+"` ( `model`, `address`, `ch`, `speed`, `circuit`, `created_at`) VALUES (%s,%s,%s,%s,%s,%s)"
+                cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['created_at']))
+            connection.commit()
+        finally:
+            connection.close()
     '''
     if action == 'query' and table=='demand_settings':
         try:            
@@ -81,10 +90,11 @@ def command( topic, recv ):
     '''
 
 if __name__ == '__main__':
-    formatter = "[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s"
-    logging.basicConfig(level=logging.INFO,format=formatter, filename='log.txt')
-    logging.basicConfig(level=logging.DEBUG,format=formatter, filename='log.txt')
     env = os.path.join(os.path.dirname(__file__),'..', '.env')
+    log = os.path.join(os.path.dirname(__file__),'..', 'log.txt')
+    formatter = "[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s"
+    logging.basicConfig(level=logging.INFO,format=formatter, filename=log)
+    logging.basicConfig(level=logging.DEBUG,format=formatter, filename=log)
     load_dotenv(env)
     host = os.environ.get("DB_HOST")
     db = os.environ.get("DB_DATABASE")

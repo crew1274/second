@@ -29,7 +29,10 @@ Route::group(['prefix' => 'network'], function () {
 });
 Route::get('test', function(){return view('test'); });
 Route::get('/', 'HomeController@index');
+
 Route::get('dashboard', 'DashboardController@index');
+Route::get('respond', 'DashboardController@respond');
+
 Route::get('record', 'RecordController@index');
 Route::resource('boot','SettingController');
 Route::resource('peaktime','ConfigController');

@@ -6,12 +6,36 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use Charts;
 use App\Location;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class DashboardController extends Controller
 {
     public function __construct()
     {
      $this->middleware('auth');
+    }
+
+    public function respond()
+    {
+     $payload = json_encode(
+        [
+            'uid' => env('UUID'),
+            'email' => Auth::user()->email,
+            'name'=> Auth::user()->name,
+            'timestamp' => Carbon::now()
+        ]);
+    
+     $client = new Client([
+        'base_uri' => 'http://140.116.39.171:5000/api/v1.0/', 'timeout'  => 2.0,]
+        );
+
+    $r = $client->request('POST', 'demand', [
+        //'json' => $payload,
+        'body' => $payload
+    ]);
+    
+    return redirect('dashboard');
     }
 
     public function index()

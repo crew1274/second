@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use GuzzleHttp\Client;
-
 use App\Demand_setting;
 use App\Demand_record;
 use App\Location;
 use App\Setting;
 use Auth;
+
 class ApiController extends Controller
 {
     public function demand_setting()
