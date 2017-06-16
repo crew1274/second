@@ -9,10 +9,16 @@ use App\Demand_setting;
 use App\Demand_record;
 use App\Location;
 use App\Setting;
-use Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ApiController extends Controller
 {
+    public function offload()
+    {
+        $contents = Storage::get('control.json');
+        return response()->json(json_decode($contents, true));
+    }
+
     public function demand_setting()
     {
         $last=Demand_setting::all()->last();

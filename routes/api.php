@@ -20,6 +20,11 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
+Route::group(['prefix' => env('UUID')], function () {
+    Route::get('demand_setting', ['as' => 'demand_setting', 'uses' => 'ApiController@demand_setting']);
+    Route::get('boot', ['as' => 'boot', 'uses' => 'ApiController@boot']);
+    Route::get('offload', ['as' => 'offload', 'uses' => 'ApiController@offload']);
+});
 /*實際抓取資料庫資料*/
 Route::get('real_data', 'ApiController@real')->name('real_data');
 
@@ -30,7 +35,7 @@ return ['value' => rand(1,50)];
 })->name('random_data');
 
 /*需量設定api*/
-Route::get('demand_setting', 'ApiController@demand_setting')->name('demand_setting');
+//Route::get('demand_setting', 'ApiController@demand_setting')->name('demand_setting');
 
 /*取得經緯度*/
 Route::get('geocoding', 'ApiController@geocoding')->name('geocoding');
@@ -38,4 +43,4 @@ Route::get('geocoding', 'ApiController@geocoding')->name('geocoding');
 /*取得日出落時間*/
 Route::get('suntime', 'ApiController@suntime')->name('suntime');
 /*開機設定*/
-Route::get('boot', 'ApiController@boot')->name('boot');
+//Route::get('boot', 'ApiController@boot')->name('boot');

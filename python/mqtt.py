@@ -82,9 +82,9 @@ def command( topic, recv ):
             connection.close()
     if action == 'query' and table=='settings':
         if sys.platform == 'linux':
-            api = "http://localhost/api/boot"
+            api = "http://localhost/api/"+uid+"/boot"
         else:
-            api = "http://localhost/real_time/public/api/boot"
+            api = "http://localhost/real_time/public/api/"+uid+"/boot"
         try:
             cont=str(requests.get(api).content,'utf-8')
         finally:
@@ -92,9 +92,19 @@ def command( topic, recv ):
 
     if action == 'query' and table =='demand_settings':
         if sys.platform == 'linux':
-            api = "http://localhost/api/demand_setting"
+            api = "http://localhost/api/"+uid+"/demand_setting"
         else:
-            api = "http://localhost/real_time/public/api/demand_setting"
+            api = "http://localhost/real_time/public/api/"+uid+"/demand_setting"
+        try:
+            cont=str(requests.get(api).content,'utf-8')
+        finally:
+            response(action,table,cont)
+    
+    if action == 'query' and table =='offloads':
+        if sys.platform == 'linux':
+            api = "http://localhost/api/"+uid+"/offload"
+        else:
+            api = "http://localhost/real_time/public/api/"+uid+"/offload"
         try:
             cont=str(requests.get(api).content,'utf-8')
         finally:
