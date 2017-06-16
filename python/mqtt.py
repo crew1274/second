@@ -6,8 +6,10 @@ from hbmqtt.client import MQTTClient, ClientException
 from hbmqtt.mqtt.constants import QOS_1, QOS_2
 import pymysql.cursors
 import json
-logger = logging.getLogger(__name__)
+import sys
+import requests
 
+logger = logging.getLogger(__name__)
 @asyncio.coroutine
 def uptime():
     C = MQTTClient()
@@ -44,47 +46,27 @@ def command( topic, recv ):
                 sql = "INSERT INTO `"+db+"`.`"+table+"` (`value`, `value_max`, `value_min`, `load_off_gap`, `reload_delay`, `reload_gap`, `cycle`, `mode`, `group`, `created_at`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
                 cursor.execute(sql,(json.loads(payload)['value'],json.loads(payload)['value_max'],json.loads(payload)['value_min'],json.loads(payload)['load_off_gap'],json.loads(payload)['reload_delay'],json.loads(payload)['reload_gap'],json.loads(payload)['cycle'],json.loads(payload)['mode'],json.loads(payload)['group'],json.loads(payload)['created_at']))
             connection.commit()
+            response(action,table,'{"status":"ok"}')
         finally:
             connection.close()
-
+                       
     if action == 'insert' and table=='settings':
         try:            
             with connection.cursor() as cursor:
                 sql = "INSERT INTO `"+db+"`.`"+table+"` ( `model`, `address`, `ch`, `speed`, `circuit`, `created_at`) VALUES (%s,%s,%s,%s,%s,%s)"
                 cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['created_at']))
             connection.commit()
-        finally:
-            connection.close()
-    '''
-    if action == 'query' and table=='demand_settings':
-        try:            
-            with connection.cursor() as cursor:
-                sql = "SELECT * FROM `"+table+"` ORDER BY ID DESC LIMIT 1"
-                cursor.execute(sql)
-                result = cursor.fetchone()
-                #print(result)
-            #connection.commit()
-        finally:
-            connection.close()
-    
-    if action == 'query' and table=='settings':
-        try:            
-            with connection.cursor() as cursor:
-                sql = "SELECT * FROM `"+db+"`.`"+table+"` WHERE 1"
-                cursor.execute(sql)
-                result = cursor.fetchone()
-                print(result)
-            #connection.commit()
+            response(action,table,'{"status":"ok"}')
         finally:
             connection.close()
 
-    '''
     if action == 'update' and table=='settings':
         try:            
             with connection.cursor() as cursor:
                 sql = "UPDATE `"+db+"`.`"+table+"` SET `model` = %s, `address`= %s, `ch`= %s, `speed`= %s, `circuit`= %s, `updated_at`= %s WHERE `"+table+"`.`id` = %s"
                 cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['updated_at'],json.loads(payload)['id']))
             connection.commit()
+            response(action,table,'{"status":"ok"}')
         finally:
             connection.close()
     
@@ -94,21 +76,39 @@ def command( topic, recv ):
                 sql = "DELETE FROM `"+db+"`.`"+table+"` WHERE `"+table+"`.`id` = %s"
                 cursor.execute(sql,(json.loads(payload)['id']))
             connection.commit()
+            response(action,table,'{"status":"ok"}')
         finally:
             connection.close()
-    
-    '''
-    if(recv == bytearray(b'down')):
-        os.system('php %s/artisan down'%(dist))
-        print("web down")
-    if(recv == bytearray(b'up')):
-        os.system('php %s/artisan up'%(dist))
-        print(" web up")
-    '''
+    if action == 'query' and table=='settings':
+        if sys.platform == 'linux':
+            api = "http://localhost/api/boot"
+        else:
+            api = "http://localhost/real_time/public/api/boot"
+        try:
+            cont=str(requests.get(api).content,'utf-8')
+        finally:
+            response(action,table,cont)
+
+    if action == 'query' and table =='demand_settings':
+        if sys.platform == 'linux':
+            api = "http://localhost/api/demand_setting"
+        else:
+            api = "http://localhost/real_time/public/api/demand_setting"
+        try:
+            cont=str(requests.get(api).content,'utf-8')
+        finally:
+            response(action,table,cont)
+
+def response(action,table,payload):
+    if sys.platform == 'linux':
+        os.system("python3 %s %s %s %s"%(resp,action,table,payload))
+    else:
+        os.system("python %s %s %s %s"%(resp,action,table,payload))
 
 if __name__ == '__main__':
     env = os.path.join(os.path.dirname(__file__),'..', '.env')
     log = os.path.join(os.path.dirname(__file__),'..', 'log.txt')
+    resp = os.path.join(os.path.dirname(__file__), 'response.py')
     formatter = "[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s"
     logging.basicConfig(level=logging.INFO,format=formatter, filename=log)
     logging.basicConfig(level=logging.DEBUG,format=formatter, filename=log)
@@ -119,4 +119,5 @@ if __name__ == '__main__':
     password = os.environ.get("DB_PASSWORD")
     uid = os.environ.get("UUID")
     url = os.environ.get("BROKER_URL")
+
     asyncio.get_event_loop().run_until_complete(uptime())
