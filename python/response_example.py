@@ -6,7 +6,7 @@ from hbmqtt.mqtt.constants import QOS_1, QOS_2
 
 logger = logging.getLogger(__name__)
 url = 'mqtt://140.116.39.225:1883'
-topic = '09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/demand_settings'
+topic = '09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/settings'
 
 @asyncio.coroutine
 def uptime_coro():

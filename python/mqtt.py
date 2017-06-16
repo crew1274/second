@@ -55,8 +55,9 @@ def command( topic, recv ):
             with connection.cursor() as cursor:
                 sql = "INSERT INTO `"+db+"`.`"+table+"` ( `model`, `address`, `ch`, `speed`, `circuit`, `created_at`) VALUES (%s,%s,%s,%s,%s,%s)"
                 cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['created_at']))
+                id = str(connection.insert_id())
             connection.commit()
-            response(action,table,'{"status":"ok"}')
+            response(action,table,'{"status":"ok","id":'+id+'}')
         finally:
             connection.close()
 
