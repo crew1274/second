@@ -16,7 +16,7 @@ class ApiController extends Controller
     public function demand_setting()
     {
         $last=Demand_setting::all()->last();
-        $last->uuid = env('UUID');
+        $last->uid = env('UUID');
         return response()->json($last);
     }
 
