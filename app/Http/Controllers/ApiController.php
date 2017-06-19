@@ -17,7 +17,7 @@ class ApiController extends Controller
     {
         $contents = Storage::get('control.json');
         $json = json_decode($contents, true);
-        $json['uid'] = array('uid' => env('UUID'));;
+        $json['uid'] = env('UUID');
         return response()->json($json);
     }
 
