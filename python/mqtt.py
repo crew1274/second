@@ -110,7 +110,7 @@ def command( topic, recv ):
         finally:
             response(action,table,cont)
     
-    if action == 'updte' and table =='offloads':
+    if action == 'update' and table =='offloads':
         try:
             switch = os.path.join(os.path.dirname(__file__), 'switch.py')
             if json.loads(payload)['boolean'] :
