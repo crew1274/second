@@ -34,7 +34,6 @@ class ControlController extends Controller
         $request=$request->input('id');
                 if( $json['control'][$request-1]['boolean'] == false )
                 {
-                    
                     shell_exec("sudo python3 /var/www/html/second/python/switch.py '{$request}' 1");
                     $json['control'][$request-1]['boolean'] = true;
                 }

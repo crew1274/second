@@ -109,6 +109,16 @@ def command( topic, recv ):
             cont=str(requests.get(api).content,'utf-8')
         finally:
             response(action,table,cont)
+    
+    if action == 'updte' and table =='offloads':
+        try:
+            switch = os.path.join(os.path.dirname(__file__), 'switch.py')
+            if json.loads(payload)['boolean'] :
+                os.system("sudo python3 %s %s %s "%(switch,json.loads(payload)['group'],"1"))
+            else:
+                os.system("sudo python3 %s %s %s "%(switch,json.loads(payload)['group'],"0"))
+        finally:
+            response(action,table,'{"status":"ok"}')
 
 def response(action,table,payload):
     if sys.platform == 'linux':
@@ -130,5 +140,4 @@ if __name__ == '__main__':
     password = os.environ.get("DB_PASSWORD")
     uid = os.environ.get("UUID")
     url = os.environ.get("BROKER_URL")
-
     asyncio.get_event_loop().run_until_complete(uptime())
