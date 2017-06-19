@@ -16,7 +16,9 @@ class ApiController extends Controller
     public function offload()
     {
         $contents = Storage::get('control.json');
-        return response()->json(json_decode($contents, true));
+        $json = json_decode($contents, true);
+        $json['uid'] = array('uid' => env('UUID'));;
+        return response()->json($json);
     }
 
     public function demand_setting()
