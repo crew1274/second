@@ -1,0 +1,174 @@
+Publish {id:29,value:1000,value_max:800,value_min:500,load_off_gap:1,reload_delay:1,reload_gap:0,cycle:15,mode:\u5148\u5378\u5148\u5fa9\u6b78,group:\u6a21\u7d44\u5e38\u95dc,created_at:2017-06-15 02:37:31,updated_at:null,uid:09ea6335-d2bd-4678-9ca9-647b5574a09e} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/demand_settings
+{id:29,value:1000,value_max:800,value_min:500,load_off_gap:1,reload_delay:1,reload_gap:0,cycle:15,mode:\u5148\u5378\u5148\u5fa9\u6b78,group:\u6a21\u7d44\u5e38\u95dc,created_at:2017-06-15 02:37:31,updated_at:null,uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}
+messages {id:29,value:1000,value_max:800,value_min:500,load_off_gap:1,reload_delay:1,reload_gap:0,cycle:15,mode:\u5148\u5378\u5148\u5fa9\u6b78,group:\u6a21\u7d44\u5e38\u95dc,created_at:2017-06-15 02:37:31,updated_at:null,uid:09ea6335-d2bd-4678-9ca9-647b5574a09e} published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings
+{status:ok}
+messages {status:ok} published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/settings
+{status:ok}
+messages {status:ok} published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/update/settings
+{status:ok}
+messages {status:ok} published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/delete/settings
+{status:ok}
+messages {status:ok} published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings
+{status:ok}
+messages {status:ok} published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings
+{status:ok}
+messages {status:ok} published
+Publish {status:ok} to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/settings
+{status:ok}
+messages {status:ok} published
+Subscribed mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e
+1: 09ea6335-d2bd-4678-9ca9-647b5574a09e/query/demand_settings => bytearray(b'{"value":"900","value_max":"800","value_min":"500","load_off_gap":"0","reload_delay":"1","reload_gap":"0","cycle":"15","mode":"\xe5\x85\x88\xe5\x8d\xb8\xe5\x85\x88\xe5\xbe\xa9\xe6\xad\xb8","group":"\xe6\xa8\xa1\xe7\xb5\x84\xe5\xb8\xb8\xe9\x97\x9c","created_at":"2017-06-15 02:37:31"}')
+2: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/demand_settings => bytearray(b'{id:82,value:900,value_max:800,value_min:500,load_off_gap:0,reload_delay:1,reload_gap:0,cycle:15,mode:\\u5148\\u5378\\u5148\\u5fa9\\u6b78,group:\\u6a21\\u7d44\\u5e38\\u95dc,created_at:2017-06-15 02:37:31,updated_at:null,uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}')
+3: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/demand_settings => bytearray(b'{id:29,value:1000,value_max:800,value_min:500,load_off_gap:1,reload_delay:1,reload_gap:0,cycle:15,mode:\\u5148\\u5378\\u5148\\u5fa9\\u6b78,group:\\u6a21\\u7d44\\u5e38\\u95dc,created_at:2017-06-15 02:37:31,updated_at:null,uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}')
+4: 09ea6335-d2bd-4678-9ca9-647b5574a09e/insert/demand_settings => bytearray(b'{"value":"900","value_max":"800","value_min":"500","load_off_gap":"0","reload_delay":"1","reload_gap":"0","cycle":"15","mode":"\xe5\x85\x88\xe5\x8d\xb8\xe5\x85\x88\xe5\xbe\xa9\xe6\xad\xb8","group":"\xe6\xa8\xa1\xe7\xb5\x84\xe5\xb8\xb8\xe9\x97\x9c","created_at":"2017-06-15 02:37:31"}')
+5: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings => bytearray(b'{status:ok}')
+6: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings => bytearray(b'{status:ok}')
+7: 09ea6335-d2bd-4678-9ca9-647b5574a09e/insert/settings => bytearray(b'{"model":"PM100","address":"2","ch":"1","speed":"9600","circuit":"5","created_at":"2017-06-15 04:45:42","created_at":"2017-06-15 04:44:42"}')
+8: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/settings => bytearray(b'{status:ok}')
+9: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/settings => bytearray(b'{status:ok}')
+10: 09ea6335-d2bd-4678-9ca9-647b5574a09e/query/settings => bytearray(b'{"model":"PM100","address":"2","ch":"1","speed":"9600","circuit":"5","created_at":"2017-06-15 04:45:42","created_at":"2017-06-15 04:44:42"}')
+11: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings => bytearray(b'[{id:5,model:PM100,address:2,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-15 04:45:42,updated_at:null},{id:6,model:PM100,address:2,ch:1,speed:9600,circuit:3,token:0,sync:null,created_at:2017-06-15 04:45:42,updated_at:null},{id:7,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]')
+12: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings => bytearray(b'[{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]')
+13: 09ea6335-d2bd-4678-9ca9-647b5574a09e/query/settings => bytearray(b'{"model":"PM100","address":"2","ch":"1","speed":"9600","circuit":"5","created_at":"2017-06-15 04:45:42","created_at":"2017-06-15 04:44:42"}')
+14: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings => bytearray(b'[{id:5,model:PM100,address:2,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-15 04:45:42,updated_at:null},{id:6,model:PM100,address:2,ch:1,speed:9600,circuit:3,token:0,sync:null,created_at:2017-06-15 04:45:42,updated_at:null},{id:7,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]')
+15: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings => bytearray(b'[{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{id:2,model:PM100,address:2,ch:1,speed:9600,circuit:5,token:0,sync:null,created_at:2017-06-15 04:44:42,updated_at:null},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]')
+16: 09ea6335-d2bd-4678-9ca9-647b5574a09e/update/settings => bytearray(b'{"id":2,"model":"PM100","address":"2","ch":"2","speed":"9600","circuit":"5","created_at":"2017-06-15 04:45:42","updated_at":"2017-06-15 04:44:42"}')
+17: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/update/settings => bytearray(b'{status:ok}')
+18: 09ea6335-d2bd-4678-9ca9-647b5574a09e/delete/settings => bytearray(b'{"id":"2"}')
+19: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/delete/settings => bytearray(b'{status:ok}')
+20: 09ea6335-d2bd-4678-9ca9-647b5574a09e/update/demand_settings => bytearray(b'{"value":"1000","value_max":"800","value_min":"500","load_off_gap":"0","reload_delay":"1","reload_gap":"0","cycle":"15","mode":"\xe5\x85\x88\xe5\x8d\xb8\xe5\x85\x88\xe5\xbe\xa9\xe6\xad\xb8","group":"\xe6\xa8\xa1\xe7\xb5\x84\xe5\xb8\xb8\xe9\x97\x9c","created_at":"2017-06-15 02:37:31"}')
+21: 09ea6335-d2bd-4678-9ca9-647b5574a09e/insert/demand_settings => bytearray(b'{"value":"1000","value_max":"800","value_min":"500","load_off_gap":"0","reload_delay":"1","reload_gap":"0","cycle":"15","mode":"\xe5\x85\x88\xe5\x8d\xb8\xe5\x85\x88\xe5\xbe\xa9\xe6\xad\xb8","group":"\xe6\xa8\xa1\xe7\xb5\x84\xe5\xb8\xb8\xe9\x97\x9c","created_at":"2017-06-15 02:37:31"}')
+22: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings => bytearray(b'{status:ok}')
+23: 09ea6335-d2bd-4678-9ca9-647b5574a09e/insert/demand_settings => bytearray(b'{"value":"900","value_max":"800","value_min":"500","load_off_gap":"0","reload_delay":"1","reload_gap":"0","cycle":"15","mode":"\xe5\x85\x88\xe5\x8d\xb8\xe5\x85\x88\xe5\xbe\xa9\xe6\xad\xb8","group":"\xe6\xa8\xa1\xe7\xb5\x84\xe5\xb8\xb8\xe9\x97\x9c","created_at":"2017-06-15 02:37:31"}')
+24: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/demand_settings => bytearray(b'{status:ok}')
+25: 09ea6335-d2bd-4678-9ca9-647b5574a09e/insert/settings => bytearray(b'{"model":"PM100","address":"2","ch":"2","speed":"9600","circuit":"6","created_at":"2017-06-15 04:45:42","updated_at":"2017-06-15 04:44:42"}')
+26: 09ea6335-d2bd-4678-9ca9-647b5574a09e/response/insert/settings => bytearray(b'{status:ok}')
+Traceback (most recent call last):
+  File "python/mqtt.py", line 123, in <module>
+    asyncio.get_event_loop().run_until_complete(uptime())
+  File "/usr/lib/python3.5/asyncio/base_events.py", line 387, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 274, in result
+    raise self._exception
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "python/mqtt.py", line 25, in uptime
+    command( packet.variable_header.topic_name, packet.payload.data)
+  File "python/mqtt.py", line 57, in command
+    cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['created_at']))
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/cursors.py", line 166, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/connections.py", line 856, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/connections.py", line 1057, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/connections.py", line 1340, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/connections.py", line 1014, in _read_packet
+    packet.check_error()
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/connections.py", line 393, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.5/dist-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry '6' for key 'settings_circuit_unique'")
+Exception ignored in: <bound method Task.__del__ of <Task pending coro=<ProtocolHandler._reader_loop() running at /usr/local/lib/python3.5/dist-packages/hbmqtt/mqtt/protocol/handler.py:373> wait_for=<Future pending cb=[Task._wakeup()]>>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 92, in __del__
+  File "/usr/lib/python3.5/asyncio/base_events.py", line 1177, in call_exception_handler
+  File "/usr/lib/python3.5/logging/__init__.py", line 1308, in error
+  File "/usr/lib/python3.5/logging/__init__.py", line 1415, in _log
+  File "/usr/lib/python3.5/logging/__init__.py", line 1425, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1487, in callHandlers
+  File "/usr/lib/python3.5/logging/__init__.py", line 855, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1047, in emit
+  File "/usr/lib/python3.5/logging/__init__.py", line 1037, in _open
+NameError: name 'open' is not defined
+Exception ignored in: <bound method Task.__del__ of <Task pending coro=<MQTTClient.handle_connection_close() running at /usr/local/lib/python3.5/dist-packages/hbmqtt/client.py:435> wait_for=<Future pending cb=[Task._wakeup()]>>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 92, in __del__
+  File "/usr/lib/python3.5/asyncio/base_events.py", line 1177, in call_exception_handler
+  File "/usr/lib/python3.5/logging/__init__.py", line 1308, in error
+  File "/usr/lib/python3.5/logging/__init__.py", line 1415, in _log
+  File "/usr/lib/python3.5/logging/__init__.py", line 1425, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1487, in callHandlers
+  File "/usr/lib/python3.5/logging/__init__.py", line 855, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1047, in emit
+  File "/usr/lib/python3.5/logging/__init__.py", line 1037, in _open
+NameError: name 'open' is not defined
+Exception ignored in: <generator object ProtocolHandler._reader_loop at 0xb6176510>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/hbmqtt/mqtt/protocol/handler.py", line 432, in _reader_loop
+  File "/usr/lib/python3.5/logging/__init__.py", line 1608, in warning
+  File "/usr/lib/python3.5/logging/__init__.py", line 1640, in log
+  File "/usr/lib/python3.5/logging/__init__.py", line 1415, in _log
+  File "/usr/lib/python3.5/logging/__init__.py", line 1425, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1487, in callHandlers
+  File "/usr/lib/python3.5/logging/__init__.py", line 855, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1047, in emit
+  File "/usr/lib/python3.5/logging/__init__.py", line 1037, in _open
+NameError: name 'open' is not defined
+Exception ignored in: <bound method Task.__del__ of <Task pending coro=<MQTTFixedHeader.from_stream() running at /usr/local/lib/python3.5/dist-packages/hbmqtt/mqtt/packet.py:99> wait_for=<Future pending cb=[Task._wakeup()]> cb=[_release_waiter(<Future pendi...sk._wakeup()]>)() at /usr/lib/python3.5/asyncio/tasks.py:350]>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 92, in __del__
+  File "/usr/lib/python3.5/asyncio/base_events.py", line 1177, in call_exception_handler
+  File "/usr/lib/python3.5/logging/__init__.py", line 1308, in error
+  File "/usr/lib/python3.5/logging/__init__.py", line 1415, in _log
+  File "/usr/lib/python3.5/logging/__init__.py", line 1425, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1487, in callHandlers
+  File "/usr/lib/python3.5/logging/__init__.py", line 855, in handle
+  File "/usr/lib/python3.5/logging/__init__.py", line 1047, in emit
+  File "/usr/lib/python3.5/logging/__init__.py", line 1037, in _open
+NameError: name 'open' is not defined
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:9600,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-13 02:15:55},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] to mqtt://140.116.39.225:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/settings
+[{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}]
+messages [{id:1,model:PM210-4-STD,address:1,ch:1,speed:1200,circuit:1,token:0,sync:null,created_at:2017-06-12 18:19:08,updated_at:2017-06-19 14:28:04},{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}] published
+Publish {control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}} to mqtt://140.116.39.212:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/offloads
+{control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}}
+messages {control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}} published
+Publish {control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}} to mqtt://140.116.39.212:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/offloads
+{control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}}
+messages {control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}} published
+Publish {control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}} to mqtt://140.116.39.212:1883/09ea6335-d2bd-4678-9ca9-647b5574a09e/response/query/offloads
+{control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}}
+messages {control:[{group:1,available:true,boolean:true},{group:2,available:true,boolean:false},{group:3,available:true,boolean:false},{group:4,available:true,boolean:false},{group:5,available:false,boolean:false},{group:6,available:false,boolean:false},{group:7,available:false,boolean:false},{group:8,available:false,boolean:false},{group:9,available:false,boolean:false},{group:10,available:false,boolean:false},{group:11,available:false,boolean:false},{group:12,available:false,boolean:false}],uid:{uid:09ea6335-d2bd-4678-9ca9-647b5574a09e}} published
