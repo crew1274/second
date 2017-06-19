@@ -12,7 +12,8 @@ if sys.platform != 'linux':
         exit()
 
 else:
-        sys.path.insert(0, '/home/pi/workspace/DAESecondStage/')
+        sys.path.insert(0, '/home/fa/workspace/demo')
+
 import DAE.MySerial as serial
 import DAE.MySQL as sql
 import DAE.Common as common
