@@ -116,10 +116,10 @@ def command( topic, recv ):
             controljson = os.path.join(os.path.dirname(__file__),'..','storage','app','control.json')
             data=json.loads(open(controljson).read())
             if json.loads(payload)['boolean'] : 
-                data['control'][json.loads(payload)-1]['boolean'] = True  
+                data['control'][int(json.loads(payload)['group'])-1]['boolean'] = True  
                 os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"1"))
             else:
-                data['control'][json.loads(payload)] = False
+                data['control'][int(json.loads(payload)['group'])-1] = False
                 os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"0"))
         finally:
             response(action,table,'{"status":"ok"}')
