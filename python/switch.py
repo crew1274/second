@@ -13,10 +13,10 @@ if sys.platform != 'linux':
 
 else:
         sys.path.insert(0, '/home/fa/workspace/demo')
-
-import DAE.MySerial as serial
-import DAE.MySQL as sql
-import DAE.Common as common
+        
+import dae.serial as serial
+import dae.mysql as sql
+import dae.common as common
 import json
 import datetime
 import time
