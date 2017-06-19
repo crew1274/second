@@ -119,7 +119,7 @@ def command( topic, recv ):
                 data['control'][int(json.loads(payload)['group'])-1]['boolean'] = True  
                 os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"1"))
             else:
-                data['control'][int(json.loads(payload)['group'])-1] = False
+                data['control'][int(json.loads(payload)['group'])-1]['boolean'] = False
                 os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"0"))
         finally:
             response(action,table,'{"status":"ok"}')
