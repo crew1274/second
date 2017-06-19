@@ -39,7 +39,7 @@
     <tbody>
     @foreach ($settings as $setting)
     @if  ($setting->token == false)
-    <tr class="danger">
+    <tr class="info">
         <td><p class="text-danger">{{ $setting->model }}</p></td>
         <td><p class="text-danger">{{ $setting->address }}</p></td>
         <td><p class="text-danger">{{ $setting->ch }}</p></td>
@@ -50,7 +50,6 @@
             {!! Form::open(['method' => 'DELETE','route' => ['boot.destroy', $setting->id],'style'=>'display:inline']) !!}
             {!! Form::submit(trans('setting.delete'), ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
-            <a class="btn btn-warning" href="{{ route('boot.show',$setting->id) }}">{{trans('setting.valid')}}</a>
         </td>
     </tr>
     @else

@@ -65,7 +65,7 @@ class SettingController extends Controller
         $setting = Setting::find($id);
         $setting_id= $setting -> id ;
         $output = array();
-        exec("python3 /var/www/html/real_time/python/valid.py '{$setting_id}' ", $output);
+        exec("python3 /var/www/html/second/python/valid.py '{$setting_id}' ", $output);
         $output=last($output);
         return redirect()->route('boot.index')
                         ->with('success',$output);

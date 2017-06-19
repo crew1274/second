@@ -113,12 +113,19 @@ def command( topic, recv ):
     if action == 'update' and table =='offloads':
         try:
             switch = os.path.join(os.path.dirname(__file__), 'switch.py')
-            if json.loads(payload)['boolean'] :
-                os.system("sudo python3 %s %s %s "%(switch,json.loads(payload)['group'],"1"))
+            controljson = os.path.join(os.path.dirname(__file__),'..','storage','app','control.json')
+            data=json.loads(open(controljson).read())
+            if json.loads(payload)['boolean'] : 
+                data['control'][json.loads(payload)-1]['boolean'] = True  
+                os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"1"))
             else:
-                os.system("sudo python3 %s %s %s "%(switch,json.loads(payload)['group'],"0"))
+                data['control'][json.loads(payload)] = False
+                os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"0"))
         finally:
             response(action,table,'{"status":"ok"}')
+            jsonFile = open(controljson, "w+")
+            jsonFile.write(json.dumps(data))
+            jsonFile.close() 
 
 def response(action,table,payload):
     if sys.platform == 'linux':
