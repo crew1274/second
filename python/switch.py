@@ -13,7 +13,6 @@ if sys.platform != 'linux':
 
 else:
         sys.path.insert(0, '/home/fa/workspace/demo')
-
 import dae.serial as serial
 import dae.mysql as sql
 import dae.common as common
