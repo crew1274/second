@@ -137,4 +137,181 @@
                     })
                     })
 </script>
+
+<script>
+        $(function() {
+        $('#switch5').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:5},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組5',response['state'],'success');},
+        error: function(response)   {swal('群組5',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch6').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:6},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組6',response['state'],'success');},
+        error: function(response)   {swal('群組6',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch7').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:7},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組7',response['state'],'success');},
+        error: function(response)   {swal('群組7',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch8').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:8},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組8',response['state'],'success');},
+        error: function(response)   {swal('群組8',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch9').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:9},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組9',response['state'],'success');},
+        error: function(response)   {swal('群組9',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch10').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:10},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組10',response['state'],'success');},
+        error: function(response)   {swal('群組10',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch11').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:11},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組11',response['state'],'success');},
+        error: function(response)   {swal('群組11',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
+<script>
+        $(function() {
+        $('#switch12').change(function() 
+        {
+            $.ajaxSetup({
+            headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+                        });
+
+              $.ajax({
+                    type :"POST",
+                    url: "control/switch",
+                    data: { id:12},
+        beforeSend:function(response){swal('Wait...');},
+        success: function(response) {swal('群組12',response['state'],'success');},
+        error: function(response)   {swal('群組12',response['state'],'error');}
+                    });
+                    })
+                    })
+</script>
+
 @endpush
