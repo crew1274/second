@@ -49,9 +49,9 @@ def command( topic, recv ):
                 sql = "INSERT INTO `"+db+"`.`"+table+"` (`value`, `value_max`, `value_min`, `load_off_gap`, `reload_delay`, `reload_gap`, `cycle`, `mode`, `group`, `created_at`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
                 cursor.execute(sql,(json.loads(payload)['value'],json.loads(payload)['value_max'],json.loads(payload)['value_min'],json.loads(payload)['load_off_gap'],json.loads(payload)['reload_delay'],json.loads(payload)['reload_gap'],json.loads(payload)['cycle'],json.loads(payload)['mode'],json.loads(payload)['group'],json.loads(payload)['created_at']))
             connection.commit()
-            response(action,table,'{"status":"ok"}')
+            response(action,table,'ok')
         except:
-             response(action,table,'{"status":"fail"}')
+             response(action,table,'fail')
         finally:
             connection.close()
                        
@@ -62,9 +62,9 @@ def command( topic, recv ):
                 cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['created_at']))
                 id = str(connection.insert_id())
             connection.commit()
-            response(action,table,'{"status":"ok","id":'+id+'}')
+            response_test(action,table,'ok',id)
         except:
-             response(action,table,'{"status":"fail"}')
+            response(action,table,'fail')
         finally:
             connection.close()
 
@@ -74,9 +74,9 @@ def command( topic, recv ):
                 sql = "UPDATE `"+db+"`.`"+table+"` SET `model` = %s, `address`= %s, `ch`= %s, `speed`= %s, `circuit`= %s, `updated_at`= %s WHERE `"+table+"`.`id` = %s"
                 cursor.execute(sql,(json.loads(payload)['model'],json.loads(payload)['address'],json.loads(payload)['ch'],json.loads(payload)['speed'],json.loads(payload)['circuit'],json.loads(payload)['updated_at'],json.loads(payload)['id']))
             connection.commit()
-            response(action,table,'{"status":"ok"}')
+            response(action,table,'ok')
         except:
-             response(action,table,'{"status":"fail"}')
+             response(action,table,'fail')
         finally:
             connection.close()
     
@@ -86,9 +86,9 @@ def command( topic, recv ):
                 sql = "DELETE FROM `"+db+"`.`"+table+"` WHERE `"+table+"`.`id` = %s"
                 cursor.execute(sql,(json.loads(payload)['id']))
             connection.commit()
-            response(action,table,'{"status":"ok"}')
+            response(action,table,'ok')
         except:
-             response(action,table,'{"status":"fail"}')
+             response(action,table,'fail')
         finally:
             connection.close()
 
@@ -113,18 +113,13 @@ def command( topic, recv ):
             cont=str(requests.get(api).content,'utf-8')
             response(action,table,cont)
         except:
-             response(action,table,'{"status":"fail"}')
+             response(action,table,'fail')
     
     if action == 'query' and table == 'offloads':
         try:
-            if sys.platform == 'linux':
-                api = "http://localhost/api/"+uid+"/offload"
-            else:
-                api = "http://localhost/real_time/public/api/"+uid+"/offload"
-            cont=str(requests.get(api).content,'utf-8')
-            response(action,table,cont)
+            response(action,table,'test')
         except:
-             response(action,table,'{"status":"fail"}')
+            response(action,table,'fail')
     
     if action == 'update' and table == 'offloads':
         try:
@@ -147,9 +142,9 @@ def command( topic, recv ):
             else:
                 data['control'][int(json.loads(payload)['group'])-1]['boolean'] = False
                 os.system("python3 %s %s %s "%(switch,json.loads(payload)['group'],"0"))
-            response(action,table,'{"status":"ok"}')
+            response(action,table,'ok')
         except:
-            response(action,table,'{"status":"fail"}')
+            response(action,table,'fail')
             return
         finally:
             jsonFile = open(controljson, "w+")
@@ -161,6 +156,11 @@ def response(action,table,payload):
         os.system("python3 %s %s %s %s"%(resp,action,table,payload))
     else:
         os.system("python %s %s %s %s"%(resp,action,table,payload))
+def response_test (action,table,payload,id):
+    if sys.platform == 'linux':
+        os.system("python3 %s %s %s %s %s"%(resp,action,table,payload,id))
+    else:
+        os.system("python %s %s %s %s %s"%(resp,action,table,payload,id))
 
 if __name__ == '__main__':
     env = os.path.join(os.path.dirname(__file__),'..', '.env')

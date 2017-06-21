@@ -3,7 +3,7 @@ import asyncio
 import os
 from hbmqtt.client import MQTTClient, ClientException
 from hbmqtt.mqtt.constants import QOS_1, QOS_2
-
+import json
 logger = logging.getLogger(__name__)
 url = 'mqtt://140.116.39.212:1883'
 topic = '4161565f-956d-4bb0-b39b-72257dc099e8/response/update/offloads'
@@ -19,8 +19,9 @@ def uptime_coro():
         while i:
             message = yield from C.deliver_message()
             packet = message.publish_packet
-            print(packet.payload.data)
-            print("%d: %s => %s" % (i, packet.variable_header.topic_name, str(packet.payload.data)))
+            j = json.loads(packet.payload.data.decode())
+            print(j)
+            #print("%d: %s => %s" % (i, packet.variable_header.topic_name, str(packet.payload.data)))
             i=i+1
         yield from C.unsubscribe([topic,topic])
         logger.info("UnSubscribed")

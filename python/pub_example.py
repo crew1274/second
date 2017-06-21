@@ -7,11 +7,11 @@ logger = logging.getLogger(__name__)
 
 url = 'mqtt://140.116.39.212:1883'
 topic = '4161565f-956d-4bb0-b39b-72257dc099e8/update/offloads'
-payload = '{"group": 9,"available":true,"boolean": false}'
+payload = '{"group": 9,"available":false,"boolean": true}'
 #payload = '{"value":"900","value_max":"800","value_min":"500","load_off_gap":"1","reload_delay":"1","reload_gap":"0","cycle":"15","mode":"\u5148\u5378\u5148\u5fa9\u6b78","group":"\u6a21\u7d44\u5e38\u95dc","created_at":"2017-06-15 02:37:31"}'
-#payload ='{"id":"5"}'
-#payload ='{"id":"7","model":"PM100","address":"3","ch":"6","speed":"9600","circuit":"10","updated_at":"2017-06-15 04:44:42"}'
-#payload ='{"model":"PM100","address":"3","ch":"6","speed":"9600","circuit":"10","created_at":"2017-06-15 04:44:42"}'
+#payload ='{"id":"7"}'
+#payload ='{"id":"9","model":"PM100","address":"3","ch":"6","speed":"9600","circuit":"3","updated_at":"2017-06-15 04:44:42"}'
+#payload ='{"model":"PM100","address":"3","ch":"6","speed":"9600","circuit":"2","created_at":"2017-06-15 04:44:42"}'
 @asyncio.coroutine
 def pub(payload):
     try:
