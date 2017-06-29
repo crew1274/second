@@ -25,7 +25,7 @@
                           <div class="container">
 			  
                         </li>
-			<!--
+			
                         <li class="divider"></li>
                         <li>
                             <a href="#">
@@ -59,7 +59,7 @@
                         </li>
                     </ul>
                 </li>
-		-->
+		
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
