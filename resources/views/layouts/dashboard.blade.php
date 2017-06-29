@@ -23,12 +23,9 @@
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
                           <div class="container">
-          @if (Session::has('message'))
-              <div class="flash alert">
-                  <p>{{ Session::get('message') }}</p>
-              </div>
-          @endif
+			  
                         </li>
+			<!--
                         <li class="divider"></li>
                         <li>
                             <a href="#">
@@ -61,8 +58,8 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-messages -->
                 </li>
+		-->
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -147,7 +144,7 @@
                         <li class="{{ Request::is('boot') ? 'active' : '' }}">
                             <a href="{{ url ('boot') }}"><i class="fa fa-cogs fa-fw"></i> {{ trans('dashboard.initial_setting') }}</a>
                         </li>
-
+			<!-- 
                         <li class="{{ Request::is('peaktime') ? 'active' : '' }}">
                             <a href="{{ url ('peaktime') }}"><i class="fa fa-edit fa-fw">
                             </i> {{ trans('dashboard.peak_time_config') }}</a>
@@ -156,7 +153,7 @@
                         <li class="{{ Request::is('network') ? 'active' : '' }}">
                             <a href="{{ url ('network') }}"><i class="fa fa-wifi"></i>{{ trans('dashboard.network')}}</a>
                         </li>
-
+			-->
                             <li >
                                 <a href="#"><i class="fa fa-wrench fa-fw"></i>
                                 {{ trans('dashboard.demand_respond')}}<span class="fa arrow"></span></a>
