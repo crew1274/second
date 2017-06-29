@@ -147,8 +147,8 @@
         $( function() {
             $( "#demand-max" ).slider({
                 range: "min",
-                min: 500,
-                max: 1500,
+                min: 100,
+                max: 1000,
                 step: 10,
                 value: {!! $last->value or 0 !!},
 
